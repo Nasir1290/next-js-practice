@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import CustomLink from "./components/customLink";
+import CustomLink from "./components/CustomLink";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,13 +11,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
 
-      <body className={inter.className}>
+      <body >
         <div>
-          <ul className=" p-4 border border-gray-300 bg-green-600 flex gap-6">
+          <ul className=" p-4 border border-gray-300 bg-gray-400 flex gap-6">
             <li>
-              
+
               <CustomLink path={"/"}>
                 Home
               </CustomLink>
@@ -29,7 +28,7 @@ export default function RootLayout({ children }) {
               </CustomLink>
             </li>
             <li>
-              <CustomLink path={"/dashboard/settings"}>
+              <CustomLink  path={"/dashboard/settings"}>
                 Settings
               </CustomLink>
             </li>

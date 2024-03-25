@@ -1,12 +1,13 @@
+"use client";
+
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-export default function CustomLink({children,path}) {
+export default function CustomLink({ children, path }) {
     const pathName = usePathname();
-  return (
-    <div>
-      <Link href={path}>{children}</Link>
-    </div>
-  )
+    const active = pathName === path;
+    return (
+        <Link className={active ? " text-blue-600" : ""} href={path} >{children}</Link>
+    )
 }
