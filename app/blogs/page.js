@@ -10,7 +10,9 @@ export default function BlogPage() {
         <div >
             Blog List
             {blogs.map((blog) => (
-                <BlogItem key={blog.id} title={blog.titile}/> 
+                <Link key={blog.id} href={`/blogs/${blog.id}`}>
+                    <BlogItem title={blog.title} />
+                </Link>
             ))}
         </div>
     )
