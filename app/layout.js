@@ -28,8 +28,13 @@ export default function RootLayout({ children }) {
               </CustomLink>
             </li>
             <li>
-              <CustomLink prefetch={false}  path={"/dashboard/settings"}>
+              <CustomLink prefetch={false}  path={"/settings"}>
                 Settings
+              </CustomLink>
+            </li>
+            <li>
+              <CustomLink  path={"/blogs"}>
+                blogs
               </CustomLink>
             </li>
           </ul>
