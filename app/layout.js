@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={inter.className}>
 
       <body >
-        <div>
+        <div className="">
           <ul className=" p-4 border border-gray-300 bg-gray-400 flex gap-6">
             <li>
 
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
               </CustomLink>
             </li>
             <li>
-              <CustomLink  path={"/dashboard/settings"}>
+              <CustomLink prefetch={false}  path={"/dashboard/settings"}>
                 Settings
               </CustomLink>
             </li>
